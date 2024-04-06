@@ -22,6 +22,11 @@ bool EventQueue::finished() const noexcept {
     return event_queue.empty();
 }
 
+
+int EventQueue::counter() const noexcept{
+  return event_queue.size();
+}
+
 void EventQueue::proceed() noexcept {
     // to proceed, next event should exist
     assert(!finished());

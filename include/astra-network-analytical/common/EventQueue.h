@@ -34,7 +34,15 @@ namespace NetworkAnalytical {
    * @return true if the event queue is empty, false otherwise
    */
         [[nodiscard]] bool finished() const noexcept;
-
+     
+     /**
+      * Check the number of registered events are invoked.
+      * i.e., check the length of the event queue.
+      *
+      * @return value 
+      */
+     int counter() const noexcept;
+     
         /**
    * Proceed the event queue.
    * i.e., first update the current event time to the next registered event
